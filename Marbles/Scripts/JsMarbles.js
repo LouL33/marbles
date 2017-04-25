@@ -5,7 +5,8 @@
 };
 
 let addAColor = (data) => {
-    $("#colorList").append($("<li>").html(data.Color));
+    $("#colorList")
+        .append($("<li>").html(data.Color));
 }
 
 
@@ -16,10 +17,10 @@ let talkToServer = () => {
     };
 
     $.ajax({
-        url: '/api/Marbles',
+        url: '/api/marbles',
         dataType: "json",
         contenetType: "application/json",
-        //data: JSON.stringify(newMarblesWithColor),
+        data: JSON.stringify(newMarblesWithColor),
         type: "POST",
         success: (data) => {
             console.log("success", data);

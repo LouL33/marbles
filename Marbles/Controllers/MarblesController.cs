@@ -21,7 +21,7 @@ namespace Marbles.Controllers
         public IHttpActionResult AddMarbles(MarblesWithColor marbles)
         {
             marbles.Id = new Random().Next(0, 100);
-            marbles.Color = "white";
+            
             return Ok(marbles);
         }
 
